@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #F8EAD0;
+}
+
+.image-control {
+    height: 13.25rem;
+}
+
+.image-template {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 11.75rem;
+    width: 11.75rem;
+    margin: 0.9rem 1.85rem 0 2rem;
+    background-image: url('http://img5.duitang.com/uploads/item/201601/06/20160106195347_4YhME.thumb.700_0.jpeg');
+    background-size: 11.75rem 11.75rem;
+}
+
+.control-box {
+    position: relative;
+    display: inline-block;
+    width: 14.55rem;
+    height: 10.8rem;
+    vertical-align: top;
+    margin-top: 0.9rem;
+}
+
+.controlbox-line1 {
+    position: relative;
+    height: 3.8rem;
+    top: 0;
+}
+
+.controlbox-line2 {
+    position: relative;
+    height: 3.65rem;
+    top: 0;
+}
+
+.control-btn {
+    position: absolute;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    border: 1px solid #5B300B;
+}
+
+.brown {
+    left: 0;
+    background-color: rgb(91, 48, 11);
+}
+
+.green {
+    left: 3.85rem;
+    background-color: rgb(126, 211, 33);
+}
+
+.red {
+    right: 3.85rem;
+    background-color: rgb(255, 0, 0);
+}
+
+.blue {
+    right: 0;
+    background-color: rgb(0, 183, 249);
+}
+
+.pencil {
+    left: 0;
+    background-image: url('../images/ic_pencil.png');
+    background-size: 2.8rem 2.8rem;
+}
+
+.brush {
+    left: 3.85rem;
+    background-image: url('../images/ic_brush.png');
+    background-size: 2.8rem 2.8rem;
+}
+
+.eraser {
+    right: 3.85rem;
+    background-image: url('../images/ic_eraser.png');
+    background-size: 2.8rem 2.8rem;
+}
+
+.bin {
+    right: 0;
+    background-image: url('../images/ic_bin.png');
+    background-size: 2.8rem 2.8rem;
+}
+
+.finish-btn {
+    color: #fff;
+    border: none;
+    width: 14.55rem;
+    height: 4.15rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-color: transparent;
+    background-image: url('../images/button_finish.png');
+    background-size: 14.55rem 4.15rem;
+}
+
+.board {
+    width: 100%;
+    height: 37.2rem;
+    background-color: #fff;
+}
+

@@ -5,84 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>drawingboard</title>
-    <style>
-    .board {
-        margin: 0 auto;
-        width: 400px;
-        height: 400px;
-    }
-    
-    .custom-control {
-        position: relative;
-        border: 1px solid #000;
-        height: 100px;
-        width: 200px;
-    }
-    
-    .control-blue {
-        position: absolute;
-        background-color: #00B7F9;
-        height: 50px;
-        width: 50px;
-    }
-    
-    .control-brush {
-        position: absolute;
-        left: 50px;
-        height: 50px;
-        width: 50px;
-    }
-    .control-reset {
-    	position: absolute;
-    	left: 100px;
-    	height: 50px;
-    	width: 50px;
-    }
-    .control-eraser {
-    	position: absolute;
-    	left: 150px;
-    	width: 50px;
-    	height: 50px;
-    }
-    </style>
+    <link rel="stylesheet" href="./assets/css/drawingboard.css">
 </head>
 
 <body>
-    <div class="example" data-example="1">
-        <h1>The default DrawingBoard</h1>
-        <div class="board" id="default-board"></div>
-        <div class='custom-control'>
-            <span class="control-blue"></span>
-            <span class="control-brush">brush</span>
-            <span class="control-reset">reset</span>
-            <span class="control-eraser">eraser</span>
+    <div class="image-control">
+        <div class="image-template"></div>
+        <div class="control-box">
+            <div class="controlbox-line1">
+                <span class="control-btn colors brown" data-color="rgb(91,48,11)"></span>
+                <span class="control-btn colors green" data-color="rgb(126,211,33)"></span>
+                <span class="control-btn colors red" data-color="rgb(255,0,0)"></span>
+                <span class="control-btn colors blue" data-color="rgb(0,183,249)"></span>
+            </div>
+            <div class="controlbox-line2">
+                <span class="control-btn pencil"></span>
+                <span class="control-btn brush"></span>
+                <span class="control-btn eraser"></span>
+                <span class="control-btn bin"></span>
+            </div>
+            <button class="finish-btn"></button>
         </div>
     </div>
+    <div class="board" id="drawing-board"></div>
     <script src="./assets/js/vender/zepto.min.js"></script>
     <script src="./assets/js/vender/drawingboard.nocontrol.min.js"></script>
-    <script data-example="1">
-    var defaultBoard = new DrawingBoard.Board('default-board', {
-    	controls: false
-    });
-
-    $('.control-blue').on('click', function(e) {
-        alert('change blue color');
-        defaultBoard.setColor('#00B7F9');
-    });
-    $('.control-brush').on('click', function(e) {
-        alert('change brush');
-        defaultBoard.ctx.lineWidth = 10;
-    });
-    $('.control-reset').on('click', function(e) {
-        alert('reset drawingboard');
-        defaultBoard.reset({background: true});
-    });
-    $('.control-eraser').on('click', function(e) {
-        alert('eraser');
-        defaultBoard.ctx.lineWidth = 20;
-        defaultBoard.setColor('#fff');
-    });
-    </script>
+    <script src="./assets/js/drawingboard.js"></script>
 </body>
 
 </html>
