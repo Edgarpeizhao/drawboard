@@ -17,6 +17,7 @@
     };
     var drawingBoard = new DrawingBoard.Board('drawing-board', {
         controls: false,
+        webStorage: false,
         color: drawingBoardState.color,
         size: drawingBoardState.lineWidth
     });
@@ -50,9 +51,10 @@
         __setBoardState(drawingBoardState);
     });
     $('.eraser').on('click', function(e) {
-        drawingBoardState.mode = 'eraser';
-        drawingBoardState.lineWidth = 20;
-        __setBoardState(drawingBoardState);
+        drawingBoard.goBackInHistory();
+        // drawingBoardState.mode = 'eraser';
+        // drawingBoardState.lineWidth = 20;
+        // __setBoardState(drawingBoardState);
     });
     $('.bin').on('click', function(e) {
         drawingBoard.reset({ background: true });
